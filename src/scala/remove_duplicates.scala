@@ -11,6 +11,11 @@ Do not allocate extra space for another array, you must do this in place with co
 For example, Given input array A = [1,1,2],
 Your function should return length = 2, and A is now [1,2].
 */
-class remove_duplicates {
-
+object remove_duplicates {
+  def remove(xs : List[Int]): List[Int] = xs match {
+    case Nil => Nil
+    case a :: Nil => List(a)
+    case a :: b :: tail if a != b => a :: remove(b :: tail)
+    case a :: b :: tail if a == b => remove(b :: tail)
+  }
 }
