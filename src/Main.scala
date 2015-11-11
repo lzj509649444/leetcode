@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    println(search_in_rotated_array_ii.search_in_roatated_ii(List(2,2,1),1))
+    println(median_of_two_sorted_array.median_of_two(List(1,2),List(1,1,1,2,3)))
   }
 }
