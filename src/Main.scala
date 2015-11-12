@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    println(median_of_two_sorted_array.median_of_two(List(1,2),List(1,1,1,2,3)))
+    println(two_sum.two_sum(List(1,2,3,4,5,6),5))
   }
 }
