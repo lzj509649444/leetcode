@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    println(bubble_sort.bubble_sort_loop(Array(2,4,5,3,1,7)).foreach(print))
+    println(bubble_sort.bubble_sort_loop2(Array(1,2,3,4,5,6)).foreach(print))
   }
 }
