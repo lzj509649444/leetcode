@@ -43,14 +43,14 @@ object bubble_sort {
     def bubble(xs:List[Int]):List[Int] = xs match {
       case Nil => Nil
       case a :: Nil => List(a)
-      case a :: b :: Nil if a > b => List(b,a)
       case a :: b :: tail if a > b => b::bubble(a::tail)
       case a :: b :: tail => a :: bubble(b::tail)
     }
-    def sort(x:List[Int]):List[Int] = x match {
-      case a :: b => a :: bubble(b)
+    def sort(x:List[Int]):List[Int] = {
+      val b = bubble(x)
+      b.head :: bubble(b.tail)
     }
-    bubble(sort(xs))
+    sort(xs)
   }
 
 }
