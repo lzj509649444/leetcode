@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    println(two_sum.two_sum(List(1,2,3,4,5,6),5))
+    println(two_sum.two_sum(List(3,2,1,4,5,6),5))
   }
 }
