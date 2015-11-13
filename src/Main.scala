@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    println(two_sum.two_sum(List(3,2,1,4,5,6),5))
+    println(bubble_sort.bubble_sort_loop(Array(2,4,5,3,1,7)).foreach(print))
   }
 }
