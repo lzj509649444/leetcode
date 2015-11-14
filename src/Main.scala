@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    permutaion_full_sorted.run()
+    permutation_next.run()
   }
 }
