@@ -4,9 +4,8 @@ package scala
  * Created by lzj on 15-11-14.
  */
 //1-n的全排列
-//不需要按照字典顺序大小输出
-//枚举每一个位置
-object permutaion_full {
+//依次枚举每一个位置,就已经按照字典顺序大小输出
+object permutaion_full_sorted {
 
   def permutaion(n: Int): Unit = {
     var tmp = new Array[Int](n)
