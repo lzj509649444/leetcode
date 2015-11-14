@@ -5,6 +5,7 @@ import scala.collection.mutable.ListBuffer
 /**
  * Created by lzj on 15-11-14.
  */
+//C(N,K)
 object combination {
 
   //只包含第一个元素的时候有那些情况
@@ -46,7 +47,7 @@ object combination {
     combination(List(1,1,2,3),resutl,tmp,2)
     println(resutl)*/
 
-    println(combination2(List(1,2,3),2))
+    println(combination2(List(1,1,2,3),2))
 
   }
 }
