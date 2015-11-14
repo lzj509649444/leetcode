@@ -19,7 +19,7 @@ object remove_duplicates_ii {
     case a :: b :: Nil => List(a,b)
     case a :: b :: tail if (a != b) => a :: remove(b :: tail)
     case a :: b :: tail if (a == b) =>
-      var r = remove(b :: tail)
+      val r = remove(b :: tail)
       r match {
         case Nil => List(a,b)
         case c :: Nil if(b==c) => List(a,b)

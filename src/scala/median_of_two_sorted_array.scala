@@ -20,16 +20,14 @@ object median_of_two_sorted_array {
 
   //闭区间和开区间怎么写?
   def median_of_two(f:List[Int],l:List[Int]): Int = {
-    def min(a:Int,b:Int): Int ={
-      if(a<b) a else b
-    }
+
     def run(ff:List[Int],m:Int, s:Int,ll:List[Int],n:Int, ss:Int,k:Int): Int = {
       if(ff.length>ll.length)run(ll,n,ss,ff,m,s,k)
       if(m==0)return ll(k-1)
-      if(k==1)return min(ff(s),ll(ss))
+      if(k==1)return utils.min(ff(s),ll(ss))
 
 
-      val ia = min(k/2,m)
+      val ia = utils.min(k/2,m)
       val ib = k - ia;
       if(ff(s+ia-1) < ll(ss+ib-1)){
         run(ff,m-ia,s+ia,ll,n,ss,k-ia)

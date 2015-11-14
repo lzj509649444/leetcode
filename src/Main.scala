@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    bubble_sort.run()
+    longest_consecutive_sequence.run()
   }
 }
