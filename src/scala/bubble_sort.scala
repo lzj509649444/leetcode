@@ -39,16 +39,40 @@ object bubble_sort {
     xs
   }
 
+  //从前往后沉下去
   def bubble_sort(xs:List[Int]):List[Int] = {
     def bubble(xs:List[Int]):List[Int] = xs match {
       case Nil => Nil
       case a :: Nil => List(a)
-      case a :: b :: tail if a > b => b::bubble(a::tail)
+      case a :: b :: tail if a < b => b::bubble(a::tail)
       case a :: b :: tail => a :: bubble(b::tail)
     }
+    def sort(x:List[Int]):List[Int] = x match {
+      case Nil => Nil
+      case _ =>
+        val b = bubble(x)
+        val c = b.dropRight(1)
+        b.last :: sort(c)
+    }
+    sort(xs)
+  }
+
+  //从后往前浮上来
+  def bubble_sort2(xs:List[Int]):List[Int] = {
+    def bubble(xs:List[Int]):List[Int] = xs match {
+      case Nil => Nil
+      case a :: Nil => List(a)
+      case a :: b =>
+        val rr = bubble(b)
+        rr match {
+          case Nil => List(a)
+          case c :: d => if(c<a) c::a::d else a :: rr
+        }
+    }
     def sort(x:List[Int]):List[Int] = {
-      val b = bubble(x)
-      b.head :: bubble(b.tail)
+      val r = bubble(x)
+      if(r.isEmpty)return Nil
+      r.head :: sort(r.drop(1))
     }
     sort(xs)
   }
