@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    three_sum.run()
+    combination.run()
   }
 }
