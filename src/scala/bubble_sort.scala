@@ -77,4 +77,13 @@ object bubble_sort {
     sort(xs)
   }
 
+  def run(): Unit ={
+    println(bubble_sort2(List(1,2,4,1,3,1,6,5)).foreach(print))
+    println(bubble_sort2(List(1,2,1,2,1)).foreach(print))
+    println(bubble_sort2(List(1,2,1)).foreach(print))
+    println(bubble_sort2(List(1)).foreach(print))
+    println(bubble_sort2(List(2,1)).foreach(print))
+    println(bubble_sort2(List(6,5,4,3,2,1)).foreach(print))
+  }
+
 }
