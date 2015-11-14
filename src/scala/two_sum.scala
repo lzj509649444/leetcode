@@ -15,6 +15,7 @@ Input: numbers={2, 7, 11, 15}, target=9
 Output: index1=1, index2=2*/
 object two_sum {
   def two_sum(x:List[Int],k:Int): (Int,Int) = {
+
     def run(xs:List[(Int,Int)],s:Int,e:Int): (Int,Int) = (s,e) match {
       case a if (a._1 >= a._2) => (-1,-1)
       case b if ((xs(b._1)._1+xs(b._2)._1)==k) =>
@@ -27,5 +28,10 @@ object two_sum {
     }
 
     run(x.zipWithIndex.sortBy(_._1),0,x.length-1)
+  }
+
+  def run(): Unit ={
+    println(two_sum(List(1,2,3,5),5))
+    println(two_sum(List(1,2,3,5),6))
   }
 }

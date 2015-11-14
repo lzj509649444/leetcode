@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    longest_consecutive_sequence.run()
+    three_sum.run()
   }
 }
