@@ -14,14 +14,18 @@ You may assume that each input would have exactly one solution.
 Input: numbers={2, 7, 11, 15}, target=9
 Output: index1=1, index2=2*/
 object two_sum {
-  def two_sum(xs:List[Int],k:Int): List[(Int,Int)] = {
-    def run(s:Int,e:Int): List[(Int,Int)] = (s,e) match {
-      case a if (a._1 >= a._2) => Nil
-      case b if ((xs(b._1)+xs(b._2))==k) => (b._1,b._2) :: run(s+1,e-1)
-      case c if ((xs(c._1)+xs(c._2))<k) => run(s+1,e)
-      case c if ((xs(c._1)+xs(c._2))>k) => run(s,e-1)
+  def two_sum(x:List[Int],k:Int): (Int,Int) = {
+    def run(xs:List[(Int,Int)],s:Int,e:Int): (Int,Int) = (s,e) match {
+      case a if (a._1 >= a._2) => (-1,-1)
+      case b if ((xs(b._1)._1+xs(b._2)._1)==k) =>
+        val p1 = xs(b._1)._2
+        val p2 = xs(b._2)._2
+        val pp = if(p1>p2) (p2,p1) else (p1,p2)
+        pp
+      case c if ((xs(c._1)._1+xs(c._2)._1)<k) => run(xs,s+1,e)
+      case c if ((xs(c._1)._1+xs(c._2)._1)>k) => run(xs,s,e-1)
     }
 
-    run(0,xs.length-1)
+    run(x.zipWithIndex.sortBy(_._1),0,x.length-1)
   }
 }
