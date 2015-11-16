@@ -9,6 +9,7 @@ package scala
 // 3. 交换partion_number 和 change_number
 // 4. reverse partion_number后面的数
 object permutation_next {
+
   def permutation_next(xs: List[Int]): List[Int] = {
     var partion_number_idx = xs.length-2
 

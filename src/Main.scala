@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    permutation_next.run()
+    permutation_kth.run()
   }
 }
