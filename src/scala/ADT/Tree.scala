@@ -3,10 +3,16 @@ package scala.ADT
 /**
  * Created by luozhenjun on 15/11/18.
  */
+/*
 sealed trait Tree[+A]
 
-case class Leaf[A](value: A) extends Tree
-case class Node(left: Tree, right: Tree)
+case class Leaf[A](value: A) extends Tree[A]
+case class TreeNode[A](left: Tree[A], right: Tree[A]) extends Tree[A]
+*/
+
+sealed trait Tree[+A]
+case object NullNode extends Tree[Nothing]
+case class TreeNode[A](value: A, left: Tree[A], right: Tree[A]) extends Tree[A]
 
 /*
 

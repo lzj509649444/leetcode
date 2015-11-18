@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    permutation_kth.run()
+    maximum_depth_of_btree.run()
   }
 }
