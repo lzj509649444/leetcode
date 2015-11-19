@@ -1,6 +1,6 @@
-package scala
+package scala.tree
 
-import scala.ADT.{TreeNode, NullNode, Tree}
+import scala.ADT.{NullNode, Tree, TreeNode}
 
 /**
  * Created by luozhenjun on 15/11/18.

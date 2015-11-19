@@ -1,4 +1,4 @@
-package scala
+package scala.sort
 
 /**
  * Created by luozhenjun on 15/11/13.
