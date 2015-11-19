@@ -8,11 +8,13 @@ import scala.ADT.{TreeNode, NullNode, Tree}
 object maximum_depth_of_btree {
   def depth[A](tree: Tree[A]): Int = tree match {
     case NullNode => 0
+    //divider and conquer
     case TreeNode(_,left,right)  => 1 + utils.max(depth(left),depth(right))
   }
 
   def depth[A](tree: Tree[A], dp: Int): Int = tree match {
     case NullNode => dp
+    //divider and conquer
     case TreeNode(_,left,right) => utils.max( depth(left,dp+1), depth(right,dp+1) )
   }
 

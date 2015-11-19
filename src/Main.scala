@@ -3,6 +3,6 @@
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    maximum_depth_of_btree.run()
+    minimum_depth_of_btree.run()
   }
 }
