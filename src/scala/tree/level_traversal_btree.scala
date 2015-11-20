@@ -5,7 +5,10 @@ import scala.ADT.{TreeNode, NullNode, Tree}
 /**
  * Created by luozhenjun on 15/11/20.
  */
+//从上到下,从左到右,打印每一层的节点值
+
 object level_traversal_btree {
+
   def level_order[Int](tree: Tree[Int]): List[Int] = {
     def run[Int](xs: List[Tree[Int]]): List[Int] = xs match {
       case Nil => Nil
