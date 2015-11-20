@@ -32,12 +32,12 @@ object bottom_up_level_traversal_btree {
             case TreeNode(v,l,r) => List(v)
           }
         }
-        if(arr.isEmpty) current  :: run(tail)
-        else current :: run(tail :+ arr)
+        if(arr.isEmpty) run(tail) ::: List(current)
+        else run(tail :+ arr) ::: List(current)
 
 
     }
-    run(List(List(tree))).reverse
+    run(List(List(tree)))
   }
 
 
