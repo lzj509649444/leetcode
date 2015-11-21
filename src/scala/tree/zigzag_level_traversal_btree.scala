@@ -31,8 +31,8 @@ object zigzag_level_traversal_btree {
         }
         val cc = if(reverse) current.reverse else current
 
-        if(arr.isEmpty) run(tail, !reverse) ::: List(cc)
-        else run(tail :+ arr, !reverse) ::: List(cc)
+        if(arr.isEmpty) cc :: run(tail, !reverse)
+        else cc :: run(tail :+ arr, !reverse)
 
 
     }
