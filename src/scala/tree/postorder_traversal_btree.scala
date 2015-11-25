@@ -6,7 +6,7 @@ import scala.ADT.{TreeNode, NullNode, Tree}
  * Created by luozhenjun on 15/11/19.
  */
 object postorder_traversal_btree {
-  def postorder[Int](tree: Tree[Int]): List[Int] = tree match {
+  def postorder(tree: Tree[Int]): List[Int] = tree match {
     case NullNode => Nil
     case TreeNode(v,left,right) => postorder(left) ::: postorder(right) ::: List(v)
   }

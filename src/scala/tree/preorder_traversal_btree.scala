@@ -6,7 +6,7 @@ import scala.ADT.{TreeNode, NullNode, Tree}
  * Created by luozhenjun on 15/11/19.
  */
 object preorder_traversal_btree {
-  def preorder[Int](tree: Tree[Int]): List[Int] = tree match {
+  def preorder(tree: Tree[Int]): List[Int] = tree match {
     case NullNode => Nil
     case TreeNode(v,left,right) => (v :: preorder(left)) ::: preorder(right)
   }

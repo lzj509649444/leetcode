@@ -7,7 +7,7 @@ import scala.ADT.{TreeNode, NullNode, Tree}
  */
 object zigzag_level_traversal_btree {
   def zigzag[Int](tree: Tree[Int]): List[List[Int]] = {
-    def run[Int](xs: List[List[Tree[Int]]],reverse: Boolean): List[List[Int]] = xs match {
+    def run(xs: List[List[Tree[Int]]],reverse: Boolean): List[List[Int]] = xs match {
       case Nil => Nil
       case (h: List[Tree[Int]]) :: tail =>
 

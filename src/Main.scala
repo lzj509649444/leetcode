@@ -1,9 +1,9 @@
-import tree.zigzag_level_traversal_btree
+import tree.path_sum
 /**
  * Created by lzj on 15-11-9.
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    zigzag_level_traversal_btree.run()
+    path_sum.run()
   }
 }

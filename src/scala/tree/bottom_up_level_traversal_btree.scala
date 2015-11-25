@@ -9,7 +9,7 @@ import scala.ADT.{TreeNode, NullNode, Tree}
 //从下到上,从左到右,打印每一层的节点值
 
 object bottom_up_level_traversal_btree {
-  def bottom_up[Int](tree: Tree[Int]): List[List[Int]] = {
+  def bottom_up(tree: Tree[Int]): List[List[Int]] = {
     def run[Int](xs: List[List[Tree[Int]]]): List[List[Int]] = xs match {
       case Nil => Nil
       case (h: List[Tree[Int]]) :: tail =>

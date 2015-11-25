@@ -9,8 +9,8 @@ import scala.ADT.{TreeNode, NullNode, Tree}
 
 object level_traversal_btree {
 
-  def level_order[Int](tree: Tree[Int]): List[Int] = {
-    def run[Int](xs: List[Tree[Int]]): List[Int] = xs match {
+  def level_order(tree: Tree[Int]): List[Int] = {
+    def run(xs: List[Tree[Int]]): List[Int] = xs match {
       case Nil => Nil
       case NullNode :: tail => run(tail)
       case TreeNode(v,left,right) :: tail =>
