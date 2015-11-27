@@ -4,6 +4,8 @@ package scala.tree
  * Created by lzj on 15-11-27.
  */
 
+//could be any binary tree?
+
 /*
 
 Follow up for problem ”Populating Next Right Pointers in Each Node”.

@@ -29,6 +29,7 @@ The flattened tree should look like:
 */
 //TODO
 object flatten_btree_to_linkedlist {
+
   def flatten(tree: Tree[Int]): List[Int] = tree match {
     case NullNode => Nil
     case TreeNode(v,l,r) =>

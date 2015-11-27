@@ -13,6 +13,7 @@ case class TreeNode[A](left: Tree[A], right: Tree[A]) extends Tree[A]
 sealed trait Tree[+A]
 case object NullNode extends Tree[Nothing]
 case class TreeNode[A](value: A, left: Tree[A], right: Tree[A]) extends Tree[A]
+case class TreeNodeWithNext[A](value: A, left: Tree[A],right: Tree[A], next: Tree[A]) extends Tree[A]
 
 /*
 
