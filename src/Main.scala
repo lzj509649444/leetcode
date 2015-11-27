@@ -1,9 +1,9 @@
-import tree.same_btree
+import tree.symmetric_btree
 /**
  * Created by lzj on 15-11-9.
  */
 object Main {
   def main(args: Array[String]): Unit = {
-    same_btree.run()
+    symmetric_btree.run()
   }
 }
