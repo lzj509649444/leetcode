@@ -1,5 +1,7 @@
 package scala.tree
 
+import scala.ADT.Tree
+
 /**
  * Created by lzj on 15-11-27.
  */
@@ -38,5 +40,7 @@ After calling your function, the tree should look like:
 
 //perfect binary tree
 object populating_next_right_pointers {
+  def populating_next(tree: Tree[Int]): Unit ={
 
+  }
 }
