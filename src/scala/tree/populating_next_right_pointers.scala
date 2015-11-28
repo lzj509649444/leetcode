@@ -157,7 +157,8 @@ object populating_next_right_pointers {
           5,
           NullNode,
           NullNode,
-          TreeNodeWithNext(6,
+          TreeNodeWithNext(
+            6,
             NullNode,
             NullNode,
             TreeNodeWithNext(
