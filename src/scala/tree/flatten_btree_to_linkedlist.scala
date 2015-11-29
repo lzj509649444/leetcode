@@ -27,7 +27,7 @@ The flattened tree should look like:
          \
           6
 */
-//TODO
+
 object flatten_btree_to_linkedlist {
 
   def flatten(tree: Tree[Int]): List[Int] = tree match {
