@@ -25,3 +25,4 @@
 //二叉树
 1. 前中后遍历，一般都要用到stack，空间复杂度为O(n)，如何才能O(1)呢？
 2. Morris遍历
+3. bottom_up, top_down
